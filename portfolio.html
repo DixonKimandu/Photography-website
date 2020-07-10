@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<br><br><br>
+<h2>PORTFOLIO</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Fashion</button>
+  <button class="btn" onclick="filterSelection('cars')"> Events</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="assets/img/port.jpg" alt="Mountains" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="assets/img/port5.jpg" alt="Lights" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="assets/img/port4.jpg" alt="Nature" style="width:100%">
+
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+      <img src="assets/img/port3.jpg" alt="Car" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="assets/img/port7.jpg" alt="Car" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="assets/img/port8.jpg" alt="Car" style="width:100%">
+
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="assets/img/gall9.jpg" alt="Car" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="assets/img/port6.jpg" alt="Car" style="width:100%">
+
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="assets/img/gall10.jpg" alt="Car" style="width:100%">
+
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+<nav>
+  <div class="logo">
+    <img src="assets/img/logo4.png" alt="" height="70px" width="230px">
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" >About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="portfolio.html" class="active">Projects</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+<section class="footer">
+    <footer>
+      <div class="footer-wrapper">
+        <div class="single-footer">
+          <h2>Address</h2>
+          <p>Nairobi, Kenya<br><br>
+            +254 700 000 000<br><br>
+            PO Box 0100 0000<br><br>
+          </p>
+        </div>
+        <div class="single-footer">
+          <img src="assets/img/logo4.png" alt="" height="70px" width="230px">
+        </div>
+        <div class="single-footer">
+          <h2>Social Media</h2>
+          <ul>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="assets/img/036-facebook.png" alt="" height="20px" width="20px"></a></li><br>
+            <li><a href="https://www.twitter.com/" target="_blank"><img src="assets/img/008-twitter.png" alt="" height="20px" width="20px"></a></li><br>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/img/029-instagram.png" alt="" height="20px" width="20px"></a></li><br>
+            <li><a href="https://www.youtube.com/" target="_blank"><img src="assets/img/001-youtube.png" alt="" height="20px" width="20px"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+</section>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="style.js">  </script>
+</body>
+</html>

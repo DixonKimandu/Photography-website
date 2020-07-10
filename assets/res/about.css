@@ -1,0 +1,88 @@
+*{
+  box-sizing: border-box;
+}
+.services{
+  position:relative;
+  margin-left: 0px;
+  padding: 0;
+  max-height: 300px;
+  color: black;
+}
+
+.services h1{
+text-transform: uppercase;
+text-decoration: underline 2px;
+font-size: 500;
+text-align: center;
+color: #4b0787;
+}
+
+.services img{
+  margin: 0;
+  padding: 10px;
+  border-radius: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.portraits{
+  float: left;
+  margin: 40px;
+  /margin-right: 50px;
+  padding: 10px;
+  width: 350px;
+  height: 450px;
+  /border-radius: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 5px grey;
+  /transform: translate(150px, 60px);
+}
+
+.bio{
+  text-align: center;
+}
+
+.services:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.overlay{
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+height: 100%;
+width: 100%;
+opacity: 0;
+transition: .5s ease;
+background-image: linear-gradient(to bottom right, #4b0787, #16dec3);
+}
+
+.portraits:hover .overlay,.studio:hover .overlay,.fashion:hover .overlay,.sports:hover .overlay,.events:hover .overlay,.wildlife:hover .overlay{
+opacity: 0.65;
+}
+
+.studio{
+  margin: 10px;
+  padding: 0;
+  width: 300px;
+  height: 450px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 5px grey;
+  transform: translate(510px, -400px);
+}
+
+.fashion{
+  margin: 10px;
+  padding: 0;
+  width: 300px;
+  height: 450px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 5px grey;
+  transform: translate(870px, -860px);
+}

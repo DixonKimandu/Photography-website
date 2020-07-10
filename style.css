@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Navbar Start*/
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+nav.black{
+  background: rgba(0, 0, 0, 0.75);
+  height: 80px;
+  padding: 10px 50px;
+}
+
+nav .logo{
+  float: left;
+}
+
+nav .logo img {
+  height: 80px;
+  transition: .5s;
+}
+
+nav.black .logo img{
+  height: 60px;
+  background: #16dec3;
+}
+
+nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a{
+  list-style: 80px;
+  color: #fff;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+nav.black ul li a{
+  color: #fff;
+  line-height: 60px;
+}
+
+nav ul li a.active,
+nav ul li a:hover
+{
+  color: #4b0787;
+  background: #16dec3;
+}
+/*Navbar End*/
+
+/*Footer Start*/
+.footer-wrapper{
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.single-footer{
+  width: 33%;
+  float: left;
+  text-align: left;
+  color: #16dec3;
+}
+
+.single-footer ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.single-footer ul a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #16dec3;
+  font-size: 12px;
+}
+
+.single-footer p{
+  width: 70%;
+}
+
+footer{
+  padding: 10px;
+  width: 100%;
+  height: 250px;
+  position: static;
+  bottom: auto;
+  /z-index: -1;
+  background: #2c362f;
+}
+/*Footer End*/
+
+/*About Page Html Start*/
+.about{
+  margin: 0;
+  padding: 0;
+  color: white;
+  /background: #191919;
+}
+
+.wave{
+  /position: fixed;
+  width: 100vw;
+  height: 637px;
+  background: linear-gradient(90deg, #4b0787, #16dec3);
+}
+
+.wave:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 215px;
+  background: url('assets/img/wave.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about_p{
+  float: left;
+  width: 50%;
+  padding: 30px;
+  /height: 350px;
+  left: 10px;
+  top: 0;
+  align-content: center;
+  color: white;
+  font-size: 1.3em;
+}
+
+
+.wave:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.services {
+  padding: 100px;
+}
+
+.services h1{
+  text-transform: uppercase;
+  text-decoration: underline 2px;
+  font-size: 500;
+  text-align: center;
+  color: #4b0787;
+}
+
+.row{
+  margin: 50px;
+  align-items: center;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  transform: translate(50px, 50px);
+}
+
+.column img{
+  margin: 0;
+  padding: 2.5px;
+  display: block;
+  /margin-left: auto;
+  /margin-right: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.overlay{
+  position: absolute;
+  /padding: 2px;
+  top: 9px;
+  left: 5px;
+  bottom: 7+px;
+  right: 0;
+  height: 450px;
+  width: 310px;
+  opacity: 0;
+  transition: .5s ease;
+  background-image: linear-gradient(to bottom right, #4b0787, #16dec3);
+}
+
+.column:hover .overlay{
+  opacity: 0.65;
+}
+
+.content{
+    position: absolute;
+    top: 30%;
+    left: -50%;
+    width: 100%;
+    transform: translate(150px, 60px);
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
+
+.team{
+  /position:fixed;
+  margin-bottom: 6
+  0px;
+  padding: 0;
+  /height: 300px;
+  color: black;
+}
+
+.team h1{
+  /margin-bottom: 90px;
+  padding: 0;
+  text-transform: uppercase;
+  text-decoration: underline 2px;
+  text-align: center;
+}
+
+.team img{
+  margin: 0;
+  padding: 10px;
+  /border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.bio{
+  text-align: center;
+}
+
+/*About Page Html End*/
+
+/*Gallery Start*/
+/* Create three equal columns that floats next to each other */
+.gallery{
+background-image: linear-gradient(to bottom right, #16dec3, #4b0787);
+}
+
+.gallery_col {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  transform: translate(50px, 50px);
+
+}
+
+.gallery_col img{
+  margin: 0;
+  padding: 2.5px;
+  display: block;
+  /margin-left: auto;
+  /margin-right: auto;
+}
+
+.gallery_row{
+  margin: 80px;
+  align-items: center;
+}
+
+/* Clear floats after the columns */
+.gallery_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gall_col {
+    width: 100%;
+  }
+}
+/*Gallery End*/
+
+/*Portfolio Start*/
+
+/*Portfolio End*/
+
+/*Login Page Html Start*/
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+#login{
+  background-image: linear-gradient(to bottom right, #4b0787, #16dec3);
+  min-height: 100vh;
+  color: #fff;
+
+}
+
+.box{
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: underline solid #3498db 2px;
+}
+
+.box input[type = "text"],.box input[type = "password"],.box input[type = email]{
+  border: 0;
+  margin: 10px;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.box input[type = "text"]:focus,.box input[type = "password"]:focus,.box input[type = email]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+
+.box input[type = "submit"]{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+  /*border: #6518a3;*/
+}
+
+/*Login Page Html End*/
+
+/*Register Page Html Start*/
+#box_r{
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-45%);
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+/*Register Page Html Start*/
+
+/*Contact Start*/
+#box_c{
+  width: 500px;
+  height: 400px;
+  border-radius: 20px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-45%);
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}/*Contact End*/

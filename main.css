@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #191919;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+nav.black{
+  background: rgba(0, 0, 0, 0.5);
+  height: 80px;
+  padding: 10px 50px;
+}
+
+nav .logo{
+  float: left;
+  background: #16dec3;
+}
+
+nav .logo img {
+  height: 50px;
+  transition: .5s;
+}
+
+nav.black .logo img{
+  height: 60px;
+  background: #16dec3;
+}
+
+nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a{
+  list-style: 80px;
+  color: #fff;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+nav.black ul li a{
+  color: #fff;
+  line-height: 60px;
+}
+
+nav ul li a.active,
+nav ul li a:hover
+{
+  color: #4b0787;
+  background: #16dec3;
+}
+
+
+.container{
+  margin-top: 50px;
+    width: 1345px;
+    height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.container .box{
+    width: 40vw;
+    text-align: center;
+    line-height: 100vh;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+a{
+  color: #fff;
+}
+
+h1{
+    margin: 0;
+    padding-top: 0;
+    line-height: 100vh;
+    max-width: 100vw;
+    font-size: 2em;
+    background: rgba(0, 0, 0,.5);
+    transition: .5s;
+}
+
+h1 span{
+    background: rgba(255, 255, 255, 0);
+    width: 100%;
+    transition: 1s;
+    color: #fff;
+    padding: 25px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.box:hover h1 span{
+    color: #262626;
+    background: rgba(22, 222, 195, 0.5);
+    letter-spacing: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
+}
+
+.box:hover h1{
+    background: rgba(0, 0, 0, 0);
+}
+
+.box:hover{
+    width: 80vw;
+    filter:  blur(50%);
+}
+
+.container .box:nth-child(1){
+    background: url('assets/img/pink.jpg');
+    background-position: center;
+}
+
+.container .box:nth-child(2){
+    background: url('assets/img/white.jpg');
+    background-position: center;
+}
+
+.container .box:nth-child(3){
+    background: url('assets/img/red.jpg');
+    background-position: center;
+}
+
+.container .box:nth-child(4){
+    background: url('assets/img/blue.jpg');
+    background-position: center;
+}
+
+.container .box:nth-child(5){
+    background: url('assets/img/check.jpg');
+    background-position: center;
+}
+/*Index Page Html End*/

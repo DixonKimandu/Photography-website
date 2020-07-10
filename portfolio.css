@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #4b0787, #16dec3);
+  padding: 0px;
+  font-family: Arial;
+  width: 100%;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #16dec3;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #4b0787;
+}
+
+.btn.active {
+  background-color: #4b0787;
+  color: white;
+}
+
+/*Navbar Start*/
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+nav.black{
+  background: rgba(0, 0, 0, 0.75);
+  height: 80px;
+  padding: 10px 50px;
+}
+
+nav .logo{
+  float: left;
+}
+
+nav .logo img {
+  height: 80px;
+  transition: .5s;
+}
+
+nav.black .logo img{
+  height: 60px;
+  background: #16dec3;
+}
+
+nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a{
+  list-style: 80px;
+  color: #fff;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+nav.black ul li a{
+  color: #fff;
+  line-height: 60px;
+}
+
+nav ul li a.active,
+nav ul li a:hover
+{
+  color: #4b0787;
+  background: #16dec3;
+}
+/*Navbar End*/
+
+/*Footer Start*/
+.footer-wrapper{
+  margin: 0 ;
+  padding: 0;
+  width: 100%;
+}
+
+.single-footer{
+  width: 33%;
+  float: left;
+  text-align: left;
+  color: #16dec3;
+}
+
+.single-footer ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.single-footer ul a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #16dec3;
+  font-size: 12px;
+}
+
+.single-footer p{
+  width: 70%;
+}
+
+footer{
+  padding: 10px;
+  width: 100%;
+  height: 250px;
+  position: static;
+  bottom: auto;
+  /z-index: -1;
+  background: #2c362f;
+}
+/*Footer End*/
