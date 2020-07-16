@@ -5,6 +5,7 @@ body{
     background: #191919;
 }
 
+/*Navbar*/
 nav{
     position: fixed;
     top: 0;
@@ -28,12 +29,12 @@ nav .logo{
 }
 
 nav .logo img {
-  height: 50px;
+  height: 40px;
   transition: .5s;
 }
 
 nav.black .logo img{
-  height: 60px;
+  height: 50px;
   background: #16dec3;
 }
 
@@ -46,6 +47,7 @@ nav ul {
 
 nav ul li {
   list-style: none;
+  display: block;
 }
 
 nav ul li a{
@@ -69,6 +71,62 @@ nav ul li a:hover
   background: #16dec3;
 }
 
+.topnav li {
+  float: left;
+  display: block;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav .logo{
+    display: none;
+  }
+  nav.black ul li a{
+    color: #fff;
+    line-height: 40px;
+  }
+  .topnav li{
+  transform: translate(-120px,0px);
+  }
+  .topnav li:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    transform: translate(100px,-20px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    float: right;
+    padding-left: 60%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .topnav.responsive {position: absolute;    background: #000;
+      opacity: 0.8; width: 370px; height: 430px;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    left: 52%;
+    top: -5%;
+    float: right;
+  }
+  .topnav.responsive li{
+    float: left;
+    display: block;
+    transform: translate(0px,0px);
+    margin-top: 5%;
+    padding: 20px;
+    text-align: left;
+
+  }
+}
+
+/*Navbar*/
 
 .container{
   margin-top: 50px;
@@ -152,3 +210,57 @@ h1 span{
     background-position: center;
 }
 /*Index Page Html End*/
+
+@media screen and (max-width: 600px) {
+  .container{
+    margin-top: 50px;
+    width: 100vw;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .container .box{
+    width: 100vw;
+    text-align: center;
+    height: 20vh;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+  }
+
+  .box:hover{
+      height: 70vh;
+      filter:  blur(50%);
+  }
+
+  h1{
+      margin: 0;
+      padding-top: 0;
+      line-height: 45vh;
+      max-width: 100vw;
+      font-size: 2em;
+      background: rgba(0, 0, 0,.5);
+      transition: .5s;
+  }
+
+  h1 span{
+      background: rgba(255, 255, 255, 0);
+      width: 100%;
+      transition: 1s;
+      color: #fff;
+      padding: 15px 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+  }
+
+  .box:hover h1 span{
+      color: #262626;
+      background: rgba(22, 222, 195, 0.5);
+      letter-spacing: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0,.5);
+  }
+
+}
