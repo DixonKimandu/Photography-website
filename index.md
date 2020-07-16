@@ -7,6 +7,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <!--Scripts-->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="loader.css">
     </head>
 <body class="home"  onload="myFunction()" style="margin:0;">
@@ -19,31 +24,33 @@
   </div>
 
     <div style="display:none;" id="myDiv" class="animate-bottom">
-      <div class="container">
-        <div class="box"><h1><span><a href="about.html">Imagine</a></span></h1></div>
-        <div class="box"><h1><span><a href="about.html">Illuminate</a></h1></div>
-        <div class="box"><h1><span><a href="about.html">Innovate</a></div>
-        <div class="box"><h1><span><a href="about.html">Inspire</a></div>
-        <div class="box"><h1><span><a href="about.html">Improve</a></h1></div>
-      </div>
-    </div>
+      <nav class="topnav" id="myTopnav">
+        <div class="logo">
+          <img src="assets/img/logo4.png" alt="">
+        </div>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li class="active"><a href="login.html">Login</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <a href="javascript:void(0);" class="icon" onclick="mobileNavbar()">
+          <i class="fa fa-bars"></i>
+          </a>
+        </ul>
+      </nav>
 
-    <nav>
-      <div class="logo">
-        <img src="assets/img/logo4.png" alt="" height="40px" width="220px">
+      <div class="container">
+        <div class="box"><h1><span><a href="#">Imagine</a></span></h1></div>
+        <div class="box"><h1><span><a href="#">Illuminate</a></h1></div>
+        <div class="box"><h1><span><a href="#">Innovate</a></div>
+        <div class="box"><h1><span><a href="#">Inspire</a></div>
+        <div class="box"><h1><span><a href="#">Improve</a></h1></div>
       </div>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="portfolio.html">Projects</a></li>
-        <li class="active"><a href="login.html">Login</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
+  </div>
 
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script type="text/javascript" src="style.js">  </script>
 </body>
 </html>
-
