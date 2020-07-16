@@ -173,12 +173,14 @@ nav ul li a:hover
   nav .logo{
     display: none;
   }
-  nav.black ul li a{
-    color: #fff;
-    line-height: 40px;
+  nav.black li{
+    transform: translate(-180px,0px);
   }
   .topnav li{
-  transform: translate(-180px,0px);
+  transform: translate(-120px,0px);
+  }
+  nav.black a.icon{
+  transform: translate(70px,-30px);
   }
   .topnav li:not(:first-child) {display: none;}
   .topnav a.icon {
