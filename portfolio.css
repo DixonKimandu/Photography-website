@@ -20,6 +20,7 @@ h1 {
   word-break: break-all;
 }
 
+/*Port*/
 .row {
   margin: 10px -16px;
 }
@@ -73,35 +74,56 @@ h1 {
   color: white;
 }
 
-/*Navbar Start*/
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    transform: translate(0px, 0px);
+
+  }
+
+  .row{
+    margin-left: 0%;
+    margin-right: 5%;
+    align-items: center;
+  }
+
+}
+
+/*Port*/
+
+/*Navbar*/
 nav{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: 10%;
     padding: 10px 100px;
     box-sizing: border-box;
     transition: .5s;
 }
 
 nav.black{
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.5);
   height: 80px;
   padding: 10px 50px;
 }
 
 nav .logo{
   float: left;
+  background: #16dec3;
 }
 
 nav .logo img {
-  height: 80px;
+  height: 40px;
   transition: .5s;
 }
 
 nav.black .logo img{
-  height: 60px;
+  height: 50px;
   background: #16dec3;
 }
 
@@ -114,6 +136,7 @@ nav ul {
 
 nav ul li {
   list-style: none;
+  display: block;
 }
 
 nav ul li a{
@@ -136,6 +159,62 @@ nav ul li a:hover
   color: #4b0787;
   background: #16dec3;
 }
+
+.topnav li {
+  float: left;
+  display: block;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav .logo{
+    display: none;
+  }
+  nav.black ul li a{
+    color: #fff;
+    line-height: 40px;
+  }
+  .topnav li{
+  transform: translate(-180px,0px);
+  }
+  .topnav li:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    transform: translate(140px,-20px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    float: right;
+    padding-left: 60%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .topnav.responsive {position: absolute;    background: #000;
+      opacity: 0.8; width: 380px; height: 430px; z-index: 99;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    left: 50%;
+    top: 7%;
+    float: right;
+  }
+  .topnav.responsive li{
+    float: left;
+    display: block;
+    transform: translate(0px,0px);
+    margin-top: 5%;
+    padding: 20px;
+    text-align: left;
+
+  }
+}
+
 /*Navbar End*/
 
 /*Footer Start*/
@@ -178,4 +257,26 @@ footer{
   /z-index: -1;
   background: #2c362f;
 }
+
+@media screen and (max-width: 600px) {
+  footer {
+    width: 100%;
+    height: 600px;
+  }
+  .footer-wrapper{
+    padding: 0;
+    width: 100%;
+  }
+  .single-footer{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-align: left;
+  }
+  .single-footer p{
+    width: 50%;
+  }
+}
+
 /*Footer End*/
