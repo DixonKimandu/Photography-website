@@ -5,10 +5,31 @@
     <title>Gallery</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <!--Scripts-->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body class="gallery">
+
+    <nav class="topnav" id="myTopnav">
+      <div class="logo">
+        <img src="assets/img/logo4.png" alt="">
+      </div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li class="active"><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <a href="javascript:void(0);" class="icon" onclick="mobileNavbar()">
+        <i class="fa fa-bars"></i>
+        </a>
+      </ul>
+    </nav>
 
     <div class="gallery_row">
       <div class="gallery_col">
@@ -60,23 +81,6 @@
           </div>
         </footer>
     </section>
-
-    <nav>
-      <div class="logo">
-        <img src="assets/img/logo4.png" alt="" height="70px" width="230px">
-      </div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="portfolio.html">Projects</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="javascript:void(0);" class="icon" onclick="mobileNavbar()">
-        <i class="fa fa-bars"></i>
-        </a></li>
-      </ul>
-    </nav>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="style.js">  </script>
