@@ -84,12 +84,14 @@ nav ul li a:hover
   nav .logo{
     display: none;
   }
-  nav.black ul li a{
-    color: #fff;
-    line-height: 40px;
+  nav.black li{
+    transform: translate(-180px,0px);
   }
   .topnav li{
   transform: translate(-120px,0px);
+  }
+  nav.black a.icon{
+  transform: translate(70px,-30px);
   }
   .topnav li:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -130,14 +132,14 @@ nav ul li a:hover
 
 .container{
   margin-top: 50px;
-    width: 1345px;
-    height: 100vh;
+    width: 1680px;
+    height: 100%;
     display: flex;
     box-sizing: border-box;
 }
 
 .container .box{
-    width: 40vw;
+    width: 80vw;
     text-align: center;
     line-height: 100vh;
     flex-grow: 1;
