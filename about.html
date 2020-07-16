@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <!--Scripts-->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--link rel="stylesheet" href="loader.css"-->
 </head>
   <body class="about" onload="myFunction()" style="margin:0;">
@@ -17,7 +22,23 @@
         <span></span>
     </div>
 
-  <div >
+    <nav class="topnav" id="myTopnav">
+      <div class="logo">
+        <img src="assets/img/logo4.png" alt="">
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li class="active"><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <a href="javascript:void(0);" class="icon" onclick="mobileNavbar()">
+        <i class="fa fa-bars"></i>
+        </a>
+      </ul>
+    </nav>
+
     <section class="wave">
       <div class="about_p">
         <br><br><br>
@@ -41,7 +62,7 @@
     <h1>Services</h1>
   <div class="row">
     <div class="column">
-      <img src="assets/img/trad.jpg" alt="" height="450px" width="300px">
+      <img src="assets/img/trad.jpg" alt="" >
       <div class="overlay">
         <div class="content">
           Portraits
@@ -50,7 +71,7 @@
     </div>
 
     <div class="column">
-      <img src="assets/img/studio.jpg" alt="" height="450px" width="300px">
+      <img src="assets/img/studio.jpg" alt="">
       <div class="overlay">
         <div class="content">
           Studio
@@ -59,7 +80,7 @@
     </div>
 
     <div class="column">
-      <img src="assets/img/fash.jpg" alt="" height="450px" width="300px">
+      <img src="assets/img/fash.jpg" alt="">
       <div class="overlay">
         <div class="content">
           Fashion
@@ -68,7 +89,7 @@
     </div>
 
     <div class="column">
-      <img src="assets/img/event.jpg" alt="" height="450px" width="300px">
+      <img src="assets/img/event.jpg" alt="">
       <div class="overlay">
         <div class="content">
           Events
@@ -77,7 +98,7 @@
     </div>
 
     <div class="column">
-      <img src="assets/img/sports.jpg" alt="" height="450px" width="300px">
+      <img src="assets/img/sports.jpg" alt="">
       <div class="overlay">
         <div class="content">
           Sports
@@ -86,7 +107,7 @@
     </div>
 
     <div class="column">
-      <img src="assets/img/wild.jpg" alt="" height="450px" width="300px">
+      <img src="assets/img/wild.jpg" alt="">
       <div class="overlay">
         <div class="content">
           Wildlife
@@ -100,7 +121,7 @@
     <h1>Team</h1>
     <div class="row">
       <div class="column">
-        <img src="assets/img/founder.jpg" alt="" height="400px" width="400px">
+        <img src="assets/img/founder.jpg" alt="">
         <div class="bio">
           <h3>Founder</h3>
           <h5>Cedrick</h5>
@@ -109,7 +130,7 @@
     </div>
 
     <div class="column">
-      <img src="assets/img/artist.jpg" alt="" height="400px" width="400px">
+      <img src="assets/img/artist.jpg" alt="">
       <div class="bio">
         <h3>Designer</h3>
         <h5>John</h5>
@@ -118,7 +139,7 @@
     </div>
 
     <div class="column">
-      <img src="assets/img/gold.jpg" alt="" height="400px" width="650px">
+      <img src="assets/img/gold.jpg" alt="">
       <div class="bio">
         <h3>Manager</h3>
         <h5>Sarah</h5>
@@ -152,20 +173,6 @@
         </div>
       </footer>
   </section>
-
-  <nav>
-    <div class="logo">
-      <img src="assets/img/logo4.png" alt="" height="70px" width="220px">
-    </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="portfolio.html">Projects</a></li>
-      <li class="active"><a href="login.html">Login</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script type="text/javascript" src="style.js">  </script>
