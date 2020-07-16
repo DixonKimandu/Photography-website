@@ -2,35 +2,36 @@
   box-sizing: border-box;
 }
 
-/*Navbar Start*/
+/*Navbar*/
 nav{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: 10%;
     padding: 10px 100px;
     box-sizing: border-box;
     transition: .5s;
 }
 
 nav.black{
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.5);
   height: 80px;
   padding: 10px 50px;
 }
 
 nav .logo{
   float: left;
+  background: #16dec3;
 }
 
 nav .logo img {
-  height: 80px;
+  height: 40px;
   transition: .5s;
 }
 
 nav.black .logo img{
-  height: 60px;
+  height: 50px;
   background: #16dec3;
 }
 
@@ -43,6 +44,7 @@ nav ul {
 
 nav ul li {
   list-style: none;
+  display: block;
 }
 
 nav ul li a{
@@ -65,7 +67,62 @@ nav ul li a:hover
   color: #4b0787;
   background: #16dec3;
 }
-/*Navbar End*/
+
+.topnav li {
+  float: left;
+  display: block;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  nav .logo{
+    display: none;
+  }
+  nav.black ul li a{
+    color: #fff;
+    line-height: 40px;
+  }
+  .topnav li{
+  transform: translate(-150px,0px);
+  }
+  .topnav li:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    transform: translate(150px,-20px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    float: right;
+    padding-left: 60%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .topnav.responsive {position: absolute;    background: #000;
+      opacity: 0.8; width: 370px; height: 430px; z-index: 99;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    float: right;
+  }
+  .topnav.responsive li{
+    float: left;
+    display: block;
+    transform: translate(0px,0px);
+    margin-top: 5%;
+    padding: 20px;
+    text-align: left;
+
+  }
+}
+/*Navbar*/
 
 /*Footer Start*/
 .footer-wrapper{
@@ -107,18 +164,38 @@ footer{
   /z-index: -1;
   background: #2c362f;
 }
+
+@media screen and (max-width: 600px) {
+  footer {
+    width: 100%;
+    height: 600px;
+  }
+  .footer-wrapper{
+    padding: 0;
+    width: 100%;
+  }
+  .single-footer{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-align: left;
+  }
+  .single-footer p{
+    width: 50%;
+  }
+}
 /*Footer End*/
 
 /*About Page Html Start*/
+/*Video*/
 .about{
   margin: 0;
   padding: 0;
   color: white;
-  /background: #191919;
 }
 
 .wave{
-  /position: fixed;
   width: 100vw;
   height: 637px;
   background: linear-gradient(90deg, #4b0787, #16dec3);
@@ -155,6 +232,43 @@ footer{
   clear: both;
 }
 
+@media screen and (max-width: 600px) {
+  .wave:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 215px;
+    background: url('assets/img/wave.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .about_p{
+    width: 100%;
+    padding: 30px;
+    padding-top: 80px;
+    margin-top: 30px;
+    left: 10px;
+    align-content: center;
+    color: #4b0787;
+    font-size: 1.3em;
+  }
+  .wave:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  video{
+    width: 300px;
+  }
+}
+
+/*Video*/
+
+/*Services*/
 .services {
   padding: 100px;
 }
@@ -183,8 +297,8 @@ footer{
   margin: 0;
   padding: 2.5px;
   display: block;
-  /margin-left: auto;
-  /margin-right: auto;
+  height: 450px;
+  width: 300px;
 }
 
 .row:after {
@@ -223,17 +337,35 @@ footer{
     text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  .services{
+    padding: 0;
+  }
+
+  .row{
+    margin-left: 7%;
+    margin-right: 15%;
+    align-items: center;
+  }
+
+  .column {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    transform: translate(0px, 0px);
+  }
+
+}
+/*Services*/
+
+/*Team*/
 .team{
-  /position:fixed;
-  margin-bottom: 6
-  0px;
+  margin-bottom: 60px;
   padding: 0;
-  /height: 300px;
   color: black;
 }
 
 .team h1{
-  /margin-bottom: 90px;
   padding: 0;
   text-transform: uppercase;
   text-decoration: underline 2px;
@@ -243,17 +375,24 @@ footer{
 .team img{
   margin: 0;
   padding: 10px;
-  /border-radius: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  height:450px;
+  width:300px;
 }
 
 .bio{
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  .bio{
+    margin-left: 50%;
+  }
+
+}
+/*Team*/
 /*About Page Html End*/
 
 /*Gallery Start*/
@@ -274,8 +413,8 @@ background-image: linear-gradient(to bottom right, #16dec3, #4b0787);
   margin: 0;
   padding: 2.5px;
   display: block;
-  /margin-left: auto;
-  /margin-right: auto;
+  width: 333px;
+  height: 500px;
 }
 
 .gallery_row{
@@ -292,9 +431,20 @@ background-image: linear-gradient(to bottom right, #16dec3, #4b0787);
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .gall_col {
-    width: 100%;
+  .gallery_col {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    transform: translate(0px, 0px);
+
   }
+
+  .gallery_row{
+    margin-left: 0%;
+    margin-right: 15%;
+    align-items: center;
+  }
+
 }
 /*Gallery End*/
 
@@ -408,4 +558,12 @@ body{
   transform: translate(-50%,-45%);
   background: rgba(0, 0, 0, 0.75);
   text-align: center;
-}/*Contact End*/
+}
+
+@media screen and (max-width: 600px) {
+  #box_c{
+    width: 300px;
+  }
+}
+
+/*Contact End*/
